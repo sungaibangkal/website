@@ -1020,7 +1020,37 @@ section,
   margin-bottom: 0;
 }
 
+/* Container Tombol Panah */
+.about-swiper .swiper-button-next, 
+.about-swiper .swiper-button-prev {
+  color: #ffffff; /* Warna panah jadi putih */
+  background-color: rgba(0, 0, 0, 0.3); /* Lingkaran transparan gelap agar panah terlihat di foto terang */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Membuat tombol jadi bulat sempurna */
+  transition: all 0.3s ease; /* Efek halus saat kursor menempel */
+}
 
+/* Efek saat panah di-hover (disentuh kursor) */
+.about-swiper .swiper-button-next:hover, 
+.about-swiper .swiper-button-prev:hover {
+  background-color: var(--accent-color); /* Berubah warna jadi warna tema KKN kamu */
+  transform: scale(1.1); /* Tombol sedikit membesar */
+}
+
+
+.about-swiper .swiper-button-next::after, 
+.about-swiper .swiper-button-prev::after {
+  font-size: 16px; /* Ukuran icon panah lebih proporsional */
+  font-weight: bold;
+}
+
+.about-swiper .swiper-button-next {
+  right: 15px;
+}
+.about-swiper .swiper-button-prev {
+  left: 15px;
+}
 
 @media (max-width: 991px) {
   .about .about-content {
@@ -1606,156 +1636,6 @@ section,
 /*--------------------------------------------------------------
 # Pricing Section
 --------------------------------------------------------------*/
-.pricing .pricing-item {
-  padding: 40px;
-  background-color: var(--surface-color);
-  border-radius: 16px;
-  text-align: center;
-  position: relative;
-  height: 100%;
-  transition: all 0.3s ease-in-out;
-}
-
-.pricing .pricing-item:hover {
-  transform: translateY(-5px);
-}
-
-.pricing .pricing-item .pricing-icon {
-  width: 56px;
-  height: 56px;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 24px;
-}
-
-.pricing .pricing-item .pricing-icon i {
-  font-size: 24px;
-  color: var(--accent-color);
-}
-
-.pricing .pricing-item h3 {
-  font-size: 24px;
-  margin-bottom: 16px;
-}
-
-.pricing .pricing-item .price {
-  font-size: 48px;
-  font-weight: 700;
-  color: var(--heading-color);
-  margin-bottom: 16px;
-}
-
-.pricing .pricing-item .price .currency {
-  font-size: 24px;
-  font-weight: 500;
-  vertical-align: super;
-}
-
-.pricing .pricing-item .price .period {
-  font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  font-weight: 400;
-}
-
-.pricing .pricing-item .description {
-  font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  margin-bottom: 32px;
-}
-
-.pricing .pricing-item .features-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 32px;
-}
-
-.pricing .pricing-item .features-list li {
-  padding: 12px 0;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 8px;
-}
-
-.pricing .pricing-item .features-list li i {
-  color: var(--accent-color);
-  font-size: 18px;
-}
-
-.pricing .pricing-item .btn-pricing {
-  display: inline-block;
-  padding: 12px 32px;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  color: var(--accent-color);
-  border-radius: 50px;
-  font-size: 15px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.pricing .pricing-item .btn-pricing:hover {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.pricing .pricing-item.featured {
-  border: 2px solid color-mix(in srgb, var(--accent-color), transparent 80%);
-  background: linear-gradient(to bottom right, color-mix(in srgb, var(--accent-color), transparent 97%), var(--surface-color));
-}
-
-.pricing .pricing-item.featured .pricing-badge {
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-  padding: 6px 20px;
-  border-radius: 50px;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.pricing .pricing-item.featured .btn-pricing {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.pricing .pricing-item.featured .btn-pricing:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
-
-@media (max-width: 768px) {
-  .pricing .pricing-item {
-    padding: 30px 20px;
-  }
-
-  .pricing .pricing-item .price {
-    font-size: 40px;
-  }
-
-  .pricing .pricing-item .price .currency {
-    font-size: 20px;
-  }
-
-  .pricing .pricing-item .price .period {
-    font-size: 14px;
-  }
-
-  .pricing .pricing-item .features-list li {
-    font-size: 14px;
-  }
-
-  .pricing .pricing-item .btn-pricing {
-    padding: 10px 24px;
-    font-size: 14px;
-  }
-}
 
 /*--------------------------------------------------------------
 # Faq Section

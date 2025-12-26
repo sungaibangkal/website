@@ -1020,6 +1020,45 @@ section,
   margin-bottom: 0;
 }
 
+/* Styling Khusus Container Video */
+.about-video-wrapper {
+  margin-top: 3rem;       /* Jarak dari teks PKM di atasnya */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.about-video-wrapper .about-info p{
+  text-align: center;
+}
+
+.video-box {
+  position: relative;
+  width: 90%;             /* Lebar video di layar besar */
+  max-width: 900px;       /* Batas lebar maksimal agar tidak terlalu raksasa */
+  aspect-ratio: 16 / 9;   /* Menjaga rasio video agar tidak gepeng */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Biar sama dengan shadow gambar kamu */
+  border-radius: 12px;
+  overflow: hidden;       /* Agar ujung video ikut bulat (rounded) */
+  background-color: #000;
+}
+
+.video-box iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Penyesuaian untuk layar HP agar tetap lebar */
+@media (max-width: 768px) {
+  .about-video-wrapper {
+    margin-top: 2rem;
+  }
+  .video-box {
+    width: 100%;         /* Di HP video memenuhi lebar layar */
+  }
+}
+
 /* Container Tombol Panah */
 .about-swiper .swiper-button-next, 
 .about-swiper .swiper-button-prev {
@@ -3277,7 +3316,6 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
 
-}
+/* Add your styles here */
+  

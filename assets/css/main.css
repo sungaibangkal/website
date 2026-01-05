@@ -1092,9 +1092,21 @@ section,
 }
 
 @media (max-width: 991px) {
+  .about-actions {
+    justify-content: center;
+  }
   .about .about-content {
     margin-top: 3rem;
   }
+}
+
+.about-actions {
+  display: flex;
+}
+
+.about-actions .primary-btn {
+  padding: 0.9rem 2rem;
+  font-size: 0.95rem;
 }
 
 /*--------------------------------------------------------------
